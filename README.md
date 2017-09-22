@@ -52,7 +52,7 @@ const exampleComponent = (element, settings) => {
 import exampleComponent from './exampleComponent';
 import factory from './factory';
 
-factory(exampleComponent, '.exampleComponentDomElement', {
+factory(exampleComponent, '[data-js-exampleComponent]', {
   exampleSetting: 'example',
 });
 ```
