@@ -5,8 +5,6 @@ This component factory is able to attach a javascript component created by a fac
 ### Usage
 
 ```javascript
-import factory from './factory';
-
 /**
  * An example component
  * @param {Element} element
@@ -36,7 +34,7 @@ const exampleComponent = (element, settings) => {
    */
   function onDestroyRequest(event) {
     element.removeEventListener(event.type, onDestroyRequest);
-    // and clear any other listeners you might 
+    // and clear any other listeners you might
     // have added to this element or its children
   }
 
@@ -47,6 +45,12 @@ const exampleComponent = (element, settings) => {
     // if you use events to communicate in a loose coupled setup
   };
 };
+
+```
+
+```javascript
+import exampleComponent from './exampleComponent';
+import factory from './factory';
 
 factory(exampleComponent, '.exampleComponentDomElement', {
   exampleSetting: 'example',
